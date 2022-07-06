@@ -10,6 +10,6 @@ app.use(cors());
 //     res.json({message: "test response here!"})
 // })
 require("./server/config/mongoose.config");
-require("./server/routes/sundae.routes")(app);
+require("./server/routes/product.routes")(app);
 
 app.listen(port,()=>console.log(`running on port ${port}`));
