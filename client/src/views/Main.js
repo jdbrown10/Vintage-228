@@ -17,7 +17,7 @@ const Main = (props) => {
         <div className="productList">
             {
                 products.map((product,i)=>{
-                    return <Product product={product}/>
+                    return <Product key={product._id} product={product}/>
                 })
             }
         </div>
