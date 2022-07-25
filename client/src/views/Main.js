@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import Product from "../components/Product";
 
 const Main = (props) => {
     const [products, setProducts] = useState([]);
@@ -13,14 +14,12 @@ const Main = (props) => {
     },[])
 
     return(
-        <div>
-            <ul>
-                {
-                    products.map((product,i)=>{
-                        return <li key={i}>{product.name}, price: {product.price}, quantity: {product.quantity}</li>
-                    })
-                }
-            </ul>
+        <div className="productList">
+            {
+                products.map((product,i)=>{
+                    return <Product product={product}/>
+                })
+            }
         </div>
     )
 }
